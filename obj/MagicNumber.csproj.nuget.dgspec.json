@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Thibaut Joncour\\Source\\Repos\\BNP_App\\MagicNumber.csproj": {}
+    "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\MagicNumber.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Thibaut Joncour\\Source\\Repos\\BNP_App\\MagicNumber.csproj": {
+    "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\MagicNumber.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Thibaut Joncour\\Source\\Repos\\BNP_App\\MagicNumber.csproj",
+        "projectUniqueName": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\MagicNumber.csproj",
         "projectName": "MagicNumber",
-        "projectPath": "C:\\Users\\Thibaut Joncour\\Source\\Repos\\BNP_App\\MagicNumber.csproj",
+        "projectPath": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\MagicNumber.csproj",
         "packagesPath": "C:\\Users\\Thibaut Joncour\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Thibaut Joncour\\Source\\Repos\\BNP_App\\obj\\",
+        "outputPath": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -53,9 +53,33 @@
               "target": "Package",
               "version": "[3.2.0, )"
             },
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[7.0.16, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.16, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[7.0.16, )"
+            },
             "Microsoft.Data.Sqlite.Core": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.16, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -68,6 +92,10 @@
             "System.Data.SQLite": {
               "target": "Package",
               "version": "[1.0.119, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.3.1, )"
             }
           },
           "imports": [
