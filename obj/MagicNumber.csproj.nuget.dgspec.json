@@ -49,41 +49,29 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Blazor.Bootstrap": {
+            "Blazorise.DataGrid": {
               "target": "Package",
-              "version": "[3.2.0, )"
+              "version": "[1.7.4, )"
             },
-            "Blazored.LocalStorage": {
+            "Blazorise.Icons.FontAwesome": {
               "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[1.7.4, )"
             },
-            "Microsoft.AspNetCore.Components.Authorization": {
+            "IgniteUI.Blazor.Trial": {
               "target": "Package",
-              "version": "[7.0.16, )"
-            },
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.16, )"
-            },
-            "Microsoft.AspNetCore.Identity.UI": {
-              "target": "Package",
-              "version": "[7.0.16, )"
+              "version": "[24.2.71, )"
             },
             "Microsoft.Data.Sqlite.Core": {
               "target": "Package",
               "version": "[9.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.16, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[7.0.16, )"
-            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[6.0.11, )"
             },
             "SQLitePCLRaw.bundle_e_sqlite3": {
               "target": "Package",
@@ -92,10 +80,6 @@
             "System.Data.SQLite": {
               "target": "Package",
               "version": "[1.0.119, )"
-            },
-            "System.IdentityModel.Tokens.Jwt": {
-              "target": "Package",
-              "version": "[8.3.1, )"
             }
           },
           "imports": [

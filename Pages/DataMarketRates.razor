@@ -212,6 +212,7 @@
         }
 
         string query_all = $"SELECT Date, Price, Code FROM dataMarketRate WHERE [Code] IN ({string.Join(",", SelectedCurrencies.Select((c, i) => $"@Code{i}"))}) AND Date BETWEEN @StartDate AND @EndDate";
+        Console.WriteLine(query_all); // Vérifie la requête générée
 
         var parameters = new Dictionary<string, object>
         {

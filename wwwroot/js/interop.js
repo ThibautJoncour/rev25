@@ -54,7 +54,7 @@ function GenerateBarsDuration(data, labels) {
         data: {
             labels: labels,
             datasets: [{
-                label: 'Duration',
+                label: 'Market Data',
                 data: data,
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 borderColor: 'rgba(75, 192, 192, 1)',
@@ -285,36 +285,219 @@ function initializeDataRate(json) {
     });
 }
 
+function GenerateLineCurve(data, labels) {
+    const ctx = document.getElementById("curveChart").getContext("2d");
 
-function GenerateLineRate(data, labels) {
-    const ctx = document.getElementById("RateChart").getContext("2d");
-
-    // Détruire l'ancien graphique si existant
+    // Détruire l'ancien graphique s'il existe
     if (chartInstance) {
         chartInstance.destroy();
     }
 
-    // Créer un nouveau graphique
+    // Palette de couleurs pour chaque courbe
+    const colors = [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+        'rgba(50,205,50,1)',
+        'rgba(220,20,60,1)',
+        'rgba(70,130,180,1)'
+    ];
+
+    let datasets = [];
+    let colorIndex = 0;
+    let allValues = [];
+
+    // Assurer que les labels sont des chaînes de caractères
+    let formattedLabels = labels.map(l => l.toString());
+
+    // Construire un dataset par taux d'intérêt avec coordonnées (x, y)
+    for (const rate in data) {
+        const prices = data[rate];
+
+        // Associer chaque prix à son abscisse correspondante
+        const datasetData = prices.map((price, index) => ({
+            x: formattedLabels[index],  // Utiliser les labels textuels
+            y: price
+        }));
+
+        datasets.push({
+            label: rate, // Nom du taux d'intérêt
+            data: datasetData, // Coordonnées x, y
+            borderColor: colors[colorIndex % colors.length],
+            backgroundColor: colors[colorIndex % colors.length].replace('1)', '0.2)'), // Version semi-transparente
+            borderWidth: 3, // Épaisseur des lignes augmentée
+            pointRadius: 5, // Ajout des points sur le tracé
+            pointHoverRadius: 7, // Points plus visibles au survol
+            tension: 0.3, // Lissage des courbes
+        });
+
+        allValues = allValues.concat(prices);
+        colorIndex++;
+    }
+
+    // Calcul du min et max pour ajuster l'échelle Y
+    const minVal = Math.min(...allValues);
+    const maxVal = Math.max(...allValues);
+
+    // Création du graphique multi-courbes avec design amélioré
     chartInstance = new Chart(ctx, {
-        type: 'Line',
+        type: 'line',
         data: {
-            labels: labels,
-            datasets: [{
-                label: 'Duration',
-                data: data,
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-            }]
+            labels: formattedLabels, // Labels définis ici
+            datasets: datasets
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false, // Permet un affichage plus dynamique
+            animation: {
+                duration: 1500, // Animation fluide
+                easing: 'easeInOutQuart'
+            },
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top',
+                    labels: {
+                        font: {
+                            size: 14,
+                            weight: 'bold'
+                        },
+                        padding: 15
+                    }
+                },
+                tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                    backgroundColor: 'rgba(0,0,0,0.8)',
+                    titleFont: { size: 14, weight: 'bold' },
+                    bodyFont: { size: 12 },
+                    padding: 10,
+                    cornerRadius: 8
+                }
+            },
             scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom',
+                    labels: formattedLabels,
+                    ticks: {
+                        autoSkip: false,
+                        maxRotation: 45,
+                        minRotation: 45,
+                        font: {
+                            size: 12
+                        }
+                    },
+                    grid: {
+                        display: true,
+                        color: 'rgba(200, 200, 200, 0.3)' // Grille plus discrète
+                    }
+                },
                 y: {
-                    beginAtZero: true
+                    beginAtZero: false,
+                    suggestedMin: minVal * 0.9,
+                    suggestedMax: maxVal * 1.1,
+                    ticks: {
+                        stepSize: (maxVal - minVal) / 5,
+                        font: {
+                            size: 12
+                        }
+                    },
+                    grid: {
+                        color: 'rgba(200, 200, 200, 0.3)', // Grille douce
+                        borderDash: [5, 5] // Ligne en pointillé
+                    }
                 }
             }
         }
     });
 }
 
+
+
+
+function showFluxModal() {
+    var modal = new bootstrap.Modal(document.getElementById('fluxModal'));
+    modal.show();
+}
+
+function downloadFile(fileName, contentType, base64Data) {
+    const link = document.createElement("a");
+    link.href = "data:" + contentType + ";base64," + base64Data;
+    link.download = fileName;
+    link.click();
+}
+
+
+
+function GenerateLineRate(data, labels) {
+    const ctx = document.getElementById("RateChart").getContext("2d");
+
+    // Détruire l'ancien graphique s'il existe
+    if (chartInstance) {
+        chartInstance.destroy();
+    }
+
+    // Palette de couleurs pour chaque courbe
+    const colors = [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+        'rgba(50,205,50,1)',
+        'rgba(220,20,60,1)',
+        'rgba(70,130,180,1)'
+    ];
+
+    let datasets = [];
+    let colorIndex = 0;
+    let allValues = [];
+
+    // Construire un dataset par taux d'intérêt
+    for (const rate in data) {
+        const prices = data[rate];
+
+        datasets.push({
+            label: rate, // Nom du taux d'intérêt
+            data: prices,
+            borderColor: colors[colorIndex % colors.length],
+            backgroundColor: 'rgba(0, 0, 0, 0)',
+            borderWidth: 2,
+            tension: 0.1
+        });
+
+        allValues = allValues.concat(prices);
+        colorIndex++;
+    }
+
+    // Calcul du min et max pour ajuster l'échelle Y
+    const minVal = Math.min(...allValues);
+    const maxVal = Math.max(...allValues);
+
+    // Création du graphique multi-courbes
+    chartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: datasets
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    suggestedMin: minVal * 0.9,  // Ajuste la marge basse
+                    suggestedMax: maxVal * 1.1,  // Ajuste la marge haute
+                    ticks: {
+                        stepSize: (maxVal - minVal) / 5
+                    }
+                }
+            }
+        }
+    });
+}

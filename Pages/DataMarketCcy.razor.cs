@@ -7,6 +7,8 @@ namespace MagicNumber.Pages
     {
         public void OnGet()
         {
+
+
         }
     }
 }

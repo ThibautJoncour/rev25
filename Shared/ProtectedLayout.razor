@@ -1,0 +1,41 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager Navigation
+
+<CascadingAuthenticationState>
+    <AuthorizeView>
+        <Authorized>
+            <div class="page">
+                <div class="sidebar">
+                    <NavMenu />
+                </div>
+
+                <main>
+                    <div class="top-row px-4">
+                        <button class="btn btn-danger" @onclick="HandleLogout">Logout</button>
+                    </div>
+
+                    <article class="content px-4">
+                        @Body
+                    </article>
+                </main>
+            </div>
+        </Authorized>
+
+        <NotAuthorized>
+            <h3>Accès refusé</h3>
+            <button class="btn btn-primary" @onclick="RedirectToLogin">Se connecter</button>
+        </NotAuthorized>
+    </AuthorizeView>
+</CascadingAuthenticationState>
+
+@code {
+    private void HandleLogout()
+    {
+        Navigation.NavigateTo("/login", forceLoad: true);
+    }
+
+    private void RedirectToLogin()
+    {
+        Navigation.NavigateTo("/login");
+    }
+}

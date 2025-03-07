@@ -3,12 +3,140 @@
   "WorkspaceRootPath": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\testpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\testpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\singletrade2.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\singletrade2.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\datagridcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\datagridcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\singletrade.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\singletrade.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\shared\\protectedlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:shared\\protectedlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\globalhedging.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\globalhedging.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\globaltrades.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\globaltrades.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\datamarketrates.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\datamarketrates.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\wwwroot\\js\\interop.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:wwwroot\\js\\interop.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\datamarketcurve.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\datamarketcurve.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\wwwroot\\js\\localstorage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:wwwroot\\js\\localstorage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\_host.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\_host.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\securities.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\securities.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\profil.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\profil.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\shared\\surveyprompt.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:shared\\surveyprompt.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\filtrerdata.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\filtrerdata.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\wwwroot\\js\\react-app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:wwwroot\\js\\react-app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\wwwroot\\js\\jszip.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:wwwroot\\js\\jszip.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\globalschedule.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\globalschedule.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\wwwroot\\css\\bootstrap\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:wwwroot\\css\\bootstrap\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\globalschedule.razor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\globalschedule.razor.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\globalhedging.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\globalhedging.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\services\\customauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:services\\customauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\shared\\loginlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:shared\\loginlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\datamarket.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\datamarket.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|c:\\users\\thibaut joncour\\source\\repos\\bnp_app\\pages\\dialogcardpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DD0DF88-1984-4178-AAD3-1C4599BD76DD}|MagicNumber.csproj|solutionrelative:pages\\dialogcardpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +146,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 261,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,40 +158,417 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Shared\\NavMenu.razor",
-              "RelativeDocumentMoniker": "Shared\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Shared\\NavMenu.razor",
-              "RelativeToolTip": "Shared\\NavMenu.razor",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAowCQAAAAOAAAA",
+              "Title": "TestPage.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\TestPage.razor",
+              "RelativeDocumentMoniker": "Pages\\TestPage.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\TestPage.razor",
+              "RelativeToolTip": "Pages\\TestPage.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-21T16:37:22.199Z",
+              "WhenOpened": "2025-03-07T10:13:33.344Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "SingleTrade2.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\SingleTrade2.razor",
+              "RelativeDocumentMoniker": "Pages\\SingleTrade2.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\SingleTrade2.razor",
+              "RelativeToolTip": "Pages\\SingleTrade2.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-03T18:56:45.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SingleTrade.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\SingleTrade.razor",
+              "RelativeDocumentMoniker": "Pages\\SingleTrade.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\SingleTrade.razor",
+              "RelativeToolTip": "Pages\\SingleTrade.razor",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAAAL4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T13:28:11.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataGridComponent.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\DataGridComponent.razor",
+              "RelativeDocumentMoniker": "Pages\\DataGridComponent.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\DataGridComponent.razor",
+              "RelativeToolTip": "Pages\\DataGridComponent.razor",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAAAHIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-17T10:58:53.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProtectedLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Shared\\ProtectedLayout.razor",
+              "RelativeDocumentMoniker": "Shared\\ProtectedLayout.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Shared\\ProtectedLayout.razor",
+              "RelativeToolTip": "Shared\\ProtectedLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T10:30:16.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GlobalHedging.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\GlobalHedging.razor",
+              "RelativeDocumentMoniker": "Pages\\GlobalHedging.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\GlobalHedging.razor",
+              "RelativeToolTip": "Pages\\GlobalHedging.razor",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAAAIIAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T10:42:35.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GlobalTrades.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\GlobalTrades.razor",
+              "RelativeDocumentMoniker": "Pages\\GlobalTrades.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\GlobalTrades.razor",
+              "RelativeToolTip": "Pages\\GlobalTrades.razor",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAAAFkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-07T11:05:02.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T09:59:12.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\_Imports.razor",
+              "RelativeDocumentMoniker": "_Imports.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\_Imports.razor",
+              "RelativeToolTip": "_Imports.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-17T11:01:10.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DataMarketRates.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\DataMarketRates.razor",
+              "RelativeDocumentMoniker": "Pages\\DataMarketRates.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\DataMarketRates.razor",
+              "RelativeToolTip": "Pages\\DataMarketRates.razor",
+              "ViewState": "AQIAAPMAAAAAAAAAAAAwwAcBAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T10:01:23.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DataMarketCurve.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\DataMarketCurve.razor",
+              "RelativeDocumentMoniker": "Pages\\DataMarketCurve.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\DataMarketCurve.razor",
+              "RelativeToolTip": "Pages\\DataMarketCurve.razor",
+              "ViewState": "AQIAAGUAAAAAAAAAAIBJwHQAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T10:02:36.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "interop.js",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\js\\interop.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\interop.js",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\js\\interop.js",
+              "RelativeToolTip": "wwwroot\\js\\interop.js",
+              "ViewState": "AQIAAKkBAAAAAAAAAIBJwMwBAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-14T13:33:22.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "localStorage.js",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\js\\localStorage.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\localStorage.js",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\js\\localStorage.js",
+              "RelativeToolTip": "wwwroot\\js\\localStorage.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-14T14:18:04.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "DialogCardPage.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\DialogCardPage.razor",
+              "RelativeDocumentMoniker": "Pages\\DialogCardPage.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\DialogCardPage.razor",
+              "RelativeToolTip": "Pages\\DialogCardPage.razor",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAQwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-05T11:26:25.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_Host.cshtml",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\_Host.cshtml",
+              "RelativeDocumentMoniker": "Pages\\_Host.cshtml",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\_Host.cshtml",
+              "RelativeToolTip": "Pages\\_Host.cshtml",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAwwGsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T11:04:39.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Shared\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Shared\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Shared\\MainLayout.razor",
+              "RelativeToolTip": "Shared\\MainLayout.razor",
+              "ViewState": "AQIAABQAAAAAAAAAAIBJwCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T10:30:29.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Shared\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Shared\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Shared\\NavMenu.razor",
+              "RelativeToolTip": "Shared\\NavMenu.razor",
+              "ViewState": "AQIAABcAAAAAAAAAAAAUwCIAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-21T16:37:22.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Securities.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\Securities.razor",
+              "RelativeDocumentMoniker": "Pages\\Securities.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\Securities.razor",
+              "RelativeToolTip": "Pages\\Securities.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T13:28:20.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\App.razor",
+              "RelativeDocumentMoniker": "App.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\App.razor",
+              "RelativeToolTip": "App.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAxwA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-17T11:00:34.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Profil.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\Profil.razor",
+              "RelativeDocumentMoniker": "Pages\\Profil.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\Profil.razor",
+              "RelativeToolTip": "Pages\\Profil.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T09:40:16.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SurveyPrompt.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Shared\\SurveyPrompt.razor",
+              "RelativeDocumentMoniker": "Shared\\SurveyPrompt.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Shared\\SurveyPrompt.razor",
+              "RelativeToolTip": "Shared\\SurveyPrompt.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T11:03:39.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FiltrerData.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\FiltrerData.razor",
+              "RelativeDocumentMoniker": "Pages\\FiltrerData.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\FiltrerData.razor",
+              "RelativeToolTip": "Pages\\FiltrerData.razor",
+              "ViewState": "AQIAAEoAAAAAAAAAAGBnwF8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T11:15:09.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\Index.razor",
+              "RelativeDocumentMoniker": "Pages\\Index.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\Index.razor",
+              "RelativeToolTip": "Pages\\Index.razor",
+              "ViewState": "AQIAABgAAAAAAAAAAGBnwC0AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T13:27:58.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "react-app.js",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\js\\react-app.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\react-app.js",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\js\\react-app.js",
+              "RelativeToolTip": "wwwroot\\js\\react-app.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-14T13:40:52.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "jszip.min.js",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\js\\jszip.min.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\jszip.min.js",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\js\\jszip.min.js",
+              "RelativeToolTip": "wwwroot\\js\\jszip.min.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-14T14:42:52.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "Pages\\Login.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\Login.razor",
+              "RelativeToolTip": "Pages\\Login.razor",
+              "ViewState": "AQIAAB4AAAAAAAAAAGBnwDgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T09:40:19.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "GlobalSchedule.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\GlobalSchedule.razor",
+              "RelativeDocumentMoniker": "Pages\\GlobalSchedule.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\GlobalSchedule.razor",
+              "RelativeToolTip": "Pages\\GlobalSchedule.razor",
+              "ViewState": "AQIAADsAAAAAAAAAAAAswEYAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T11:32:18.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AQIAAIcAAAAAAAAAAIBpwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-14T11:05:41.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "bootstrap.min.css",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\bootstrap\\bootstrap.min.css",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+              "RelativeToolTip": "wwwroot\\css\\bootstrap\\bootstrap.min.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-14T11:05:31.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "GlobalSchedule.razor.js",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\GlobalSchedule.razor.js",
+              "RelativeDocumentMoniker": "Pages\\GlobalSchedule.razor.js",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\GlobalSchedule.razor.js",
+              "RelativeToolTip": "Pages\\GlobalSchedule.razor.js",
+              "ViewState": "AQIAAB8AAAAAAAAAAIBpwEIAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-14T10:57:02.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "GlobalHedging.razor.css",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\GlobalHedging.razor.css",
+              "RelativeDocumentMoniker": "Pages\\GlobalHedging.razor.css",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\GlobalHedging.razor.css",
+              "RelativeToolTip": "Pages\\GlobalHedging.razor.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-14T10:42:30.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CustomAuthenticationStateProvider.cs",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Services\\CustomAuthenticationStateProvider.cs",
+              "RelativeDocumentMoniker": "Services\\CustomAuthenticationStateProvider.cs",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Services\\CustomAuthenticationStateProvider.cs",
+              "RelativeToolTip": "Services\\CustomAuthenticationStateProvider.cs",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAgwH4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T10:28:48.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "LoginLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Shared\\LoginLayout.razor",
+              "RelativeDocumentMoniker": "Shared\\LoginLayout.razor",
+              "ToolTip": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Shared\\LoginLayout.razor",
+              "RelativeToolTip": "Shared\\LoginLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T10:30:28.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
               "Title": "DataMarket.razor",
               "DocumentMoniker": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\DataMarket.razor",
               "RelativeDocumentMoniker": "Pages\\DataMarket.razor",
@@ -71,8 +576,7 @@
               "RelativeToolTip": "Pages\\DataMarket.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-21T16:36:33.827Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T16:36:33.827Z"
             }
           ]
         }

@@ -1,19 +1,98 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager Navigation
+@inject CustomAuthenticationStateProvider AuthProvider
+<style>
+    /* Modern Blue Button */
+    .custom-blue-button {
+        background-color: #00B5E2;
+        color: white;
+        border: none;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
 
-<PageTitle>MagicNumber</PageTitle>
+    .custom-blue-button:hover {
+        background-color: #0095C8; /* Slightly darker blue on hover */
+    }
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    /* Modern Red Logout Button */
+    .custom-red-button {
+        background-color: #E63946; /* Bright red */
+        color: white;
+        border: none;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+    .custom-red-button:hover {
+        background-color: #C62828; /* Darker red on hover */
+    }
+</style>
+<RadzenDialog />
+
+
+<CascadingAuthenticationState>
+    <div class="page">
+        <div class="sidebar">
+            <NavMenu />
         </div>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+        <main class="flex-grow-1 flex-shrink-0 overflow-hidden">
+            <div class="top-row px-4">
+                @if (isAuthenticated)
+                {
+        <button class="custom-red-button" @onclick="HandleLogout">Logout</button>
+        <button class="custom-blue-button" @onclick="RedirectProfil">Profil</button>
+                }
+                else
+                {
+        <button class="custom-blue-button" @onclick="RedirectToLogin">Login</button>
+                }
+
+
+
+
+                <a href="https://www.levanti-consultants.fr/" target="_blank">About Levanti</a>
+            </div>
+
+
+            <article class="content px-4">
+                @Body
+            </article>
+        </main>
+    </div>
+</CascadingAuthenticationState>
+
+@code {
+    private bool isAuthenticated = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthProvider.GetAuthenticationStateAsync();
+        isAuthenticated = authState.User.Identity.IsAuthenticated;
+    }
+    private void RedirectToLogin()
+    {
+        Navigation.NavigateTo("/");
+
+    }
+
+    private void RedirectProfil()
+    {
+        Navigation.NavigateTo("/Profil");
+
+    }
+
+    private async Task HandleLogout()
+    {
+        await AuthProvider.Logout();
+        Navigation.NavigateTo("/", forceLoad: true);
+    }
+
+}

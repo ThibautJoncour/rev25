@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\GlobalHedging.razor.js",
+      "PackagePath": "staticwebassets\\Pages\\GlobalHedging.razor.js"
+    },
+    {
+      "Id": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\GlobalSchedule.razor.js",
+      "PackagePath": "staticwebassets\\Pages\\GlobalSchedule.razor.js"
+    },
+    {
       "Id": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\Pages\\GlobalTrades.razor.js",
       "PackagePath": "staticwebassets\\Pages\\GlobalTrades.razor.js"
     },
@@ -65,20 +73,12 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\images\\backtound.mp4",
-      "PackagePath": "staticwebassets\\images\\backtound.mp4"
+      "Id": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\images\\logo.jpg",
+      "PackagePath": "staticwebassets\\images\\logo.jpg"
     },
     {
       "Id": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\images\\logo_black.jpg",
       "PackagePath": "staticwebassets\\images\\logo_black.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\images\\logo_bnp.png",
-      "PackagePath": "staticwebassets\\images\\logo_bnp.png"
-    },
-    {
-      "Id": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\images\\videoplayback.mp4",
-      "PackagePath": "staticwebassets\\images\\videoplayback.mp4"
     },
     {
       "Id": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\index.html",
@@ -87,6 +87,10 @@
     {
       "Id": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\js\\interop.js",
       "PackagePath": "staticwebassets\\js\\interop.js"
+    },
+    {
+      "Id": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\js\\jszip.min.js",
+      "PackagePath": "staticwebassets\\js\\jszip.min.js"
     },
     {
       "Id": "C:\\Users\\Thibaut Joncour\\source\\repos\\BNP_App\\wwwroot\\js\\localStorage.js",

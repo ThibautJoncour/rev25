@@ -1,5 +1,13 @@
-@import '_content/Blazor.Bootstrap/Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css';
-
+/* _content/MagicNumber/Pages/GlobalHedging.razor.rz.scp.css */
+/* ::deep pseudo-selector prevents Blazor to process .dt-layout-table (https://dev.to/netsi1964/blazor-css-isolation-a-shallow-look-at-it-280) */
+.global-hedging-table-container[b-vr0zl7z97c]  .dt-layout-table {
+    overflow: auto;
+}
+/* _content/MagicNumber/Pages/GlobalSchedule.razor.rz.scp.css */
+/* ::deep pseudo-selector prevents Blazor to process .dt-layout-table (https://dev.to/netsi1964/blazor-css-isolation-a-shallow-look-at-it-280) */
+.global-schedule-table-container[b-lqj92j8yek]  .dt-layout-table {
+    overflow: auto;
+}
 /* _content/MagicNumber/Pages/GlobalTrades.razor.rz.scp.css */
 /* ::deep pseudo-selector prevents Blazor to process .dt-layout-table (https://dev.to/netsi1964/blazor-css-isolation-a-shallow-look-at-it-280) */
 .global-trades-table-container[b-issm9t6tph]  .dt-layout-table {

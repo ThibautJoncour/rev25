@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net7.0
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MagicNumber
 build_property.RootNamespace = MagicNumber
@@ -26,6 +34,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9uZF9wcmljaW5nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Thibaut Joncour/source/repos/BNP_App/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thibaut Joncour/source/repos/BNP_App/Pages/DataGridComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF0YUdyaWRDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thibaut Joncour/source/repos/BNP_App/Pages/DataMarket.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF0YU1hcmtldC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Thibaut Joncour/source/repos/BNP_App/Pages/DataMarketCcy.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF0YU1hcmtldENjeS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Thibaut Joncour/source/repos/BNP_App/Pages/DataMarketRates.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF0YU1hcmtldFJhdGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thibaut Joncour/source/repos/BNP_App/Pages/DialogCardPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlhbG9nQ2FyZFBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Thibaut Joncour/source/repos/BNP_App/Pages/FiltrerData.razor]
@@ -70,6 +94,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2luZ2xlVHJhZGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Thibaut Joncour/source/repos/BNP_App/Pages/SingleTrade2.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2luZ2xlVHJhZGUyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thibaut Joncour/source/repos/BNP_App/Pages/TestPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdFBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Thibaut Joncour/source/repos/BNP_App/Shared/LoginLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luTGF5b3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -86,6 +118,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Thibaut Joncour/source/repos/BNP_App/Pages/GlobalHedging.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2xvYmFsSGVkZ2luZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-vr0zl7z97c
+
+[C:/Users/Thibaut Joncour/source/repos/BNP_App/Pages/GlobalSchedule.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2xvYmFsU2NoZWR1bGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-lqj92j8yek
+
 [C:/Users/Thibaut Joncour/source/repos/BNP_App/Pages/GlobalTrades.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2xvYmFsVHJhZGVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-issm9t6tph
@@ -100,10 +140,6 @@ build_metadata.AdditionalFiles.CssScope = b-solvn16nii
 
 [C:/Users/Thibaut Joncour/source/repos/BNP_App/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Thibaut Joncour/source/repos/BNP_App/Pages/test.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdGVzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Thibaut Joncour/source/repos/BNP_App/Pages/_Host.cshtml]

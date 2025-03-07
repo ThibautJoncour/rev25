@@ -7,9 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Blazor.Bootstrap" Version="3.2.0" />
+    <PackageReference Include="Blazorise.DataGrid" Version="1.7.4" />
+    <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.7.4" />
+    <PackageReference Include="IgniteUI.Blazor.Trial" Version="24.2.71" />
     <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="9.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Radzen.Blazor" Version="6.0.11" />
     <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.10" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.119" />
   </ItemGroup>

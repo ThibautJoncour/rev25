@@ -1,0 +1,11 @@
+﻿################################################################################
+# Ce fichier .gitignore a été automatiquement créé par Microsoft(R) Visual Studio.
+################################################################################
+
+/Pages
+/Data
+/obj/Debug/net7.0
+/.vs/ProjectEvaluation
+/.vs/MagicNumber/v17
+/.vs/MagicNumber/FileContentIndex
+/.vs/VSWorkspaceState.json
