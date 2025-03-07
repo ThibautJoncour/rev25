@@ -1,0 +1,122 @@
+﻿@page "/singletrade4"
+@using Newtonsoft.Json
+@inject DatabaseService DatabaseService
+@inject IJSRuntime JSRuntime
+@using System.Text
+
+@attribute [Authorize]
+
+@inject DialogService DialogService
+
+
+
+
+<h3 style="color: #00B5E2; font-size: 24px; font-weight: bold; text-transform: uppercase;">
+    Search Deal
+
+</h3>
+
+<RadzenTextBox @bind-Value="SearchTerm" Placeholder="Enter ARPSON reference..." Style="width: 300px;" />
+<RadzenButton Text="Search" Icon="search" Click="ApplyFilter" 
+              Style="margin-left: 10px; background-color: #00B5E2; color: white; border: none; font-weight: bold; padding: 10px 15px; border-radius: 5px;" />
+<RadzenButton Text="Deal Details" ButtonStyle="ButtonStyle.Secondary" Click=@ShowCloseableFromOverlayDialog />
+
+@if (FilteredData.Any())
+{
+        <h3 style="color: #00B5E2; font-size: 22px; font-weight: bold; margin-top: 20px;">
+            Securities
+        </h3>
+        <RadzenDataGrid TItem="Dictionary<string, object>" Data="@FilteredData" AllowSorting="true" AllowFiltering="true"
+                        AllowPaging="true" PageSize="5">
+            <Columns>
+            @{
+                var columnsToDisplay = FilteredData.First().Keys.Take(6);
+            }
+            @foreach (var column in columnsToDisplay)
+            {
+                        <RadzenDataGridColumn TItem="Dictionary<string, object>" Title="@column">
+                            <Template Context="row">
+                        @row[column]?.ToString()
+                            </Template>
+                        </RadzenDataGridColumn>
+            }
+            </Columns>
+        </RadzenDataGrid>
+}
+
+
+@code {
+    private string SearchTerm = string.Empty;
+    private List<Dictionary<string, object>> FilteredData = new();
+
+
+    private bool ShowAudit = false;
+    private bool ShowSchedules = false;
+
+    private async Task ApplyFilter()
+    {
+        if (string.IsNullOrWhiteSpace(SearchTerm))
+        {
+            FilteredData.Clear();
+
+            return;
+        }
+
+        string query = "SELECT * FROM trades WHERE [ARPSONRef] = @Input";
+
+        var parameters = new Dictionary<string, object> { { "@Input", SearchTerm } };
+
+        FilteredData = DatabaseService.GetData(query, parameters);
+
+    }
+    async Task ShowCloseableFromOverlayDialog()
+{
+    if (FilteredData == null || !FilteredData.Any())
+    {
+        await DialogService.OpenAsync("Query Result", ds => 
+        @<div style="padding: 20px; text-align: center;">
+            <h4 style="color: red;">No data available.</h4>
+            <p>Please perform a search to see results.</p>
+        </div>, 
+        new DialogOptions { CloseDialogOnOverlayClick = true });
+        return;
+    }
+
+    // Affichage des résultats sous forme de colonnes
+    await DialogService.OpenAsync("Query Result", ds => 
+    @<div style="padding: 20px;">
+        <h4 style="color: #00B5E2; text-align: center;">Query Result</h4>
+        
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                <thead>
+                    <tr style="background-color: #00B5E2; color: white; text-align: left;">
+                        <th style="padding: 10px; border: 1px solid #ddd;">Column</th>
+                        @for (int i = 0; i < FilteredData.Count; i++)
+                        {
+                            <th style="padding: 10px; border: 1px solid #ddd;">Result @((i + 1))</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var column in FilteredData.First().Keys)
+                    {
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 10px; font-weight: bold; border: 1px solid #ddd; background-color: #f4f4f4;">@column</td>
+                            @foreach (var row in FilteredData)
+                            {
+                                <td style="padding: 10px; border: 1px solid #ddd;">@row[column]?.ToString()</td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>, 
+    new DialogOptions { CloseDialogOnOverlayClick = true, Width = "800px", Height = "500px" });
+}
+
+
+
+
+}

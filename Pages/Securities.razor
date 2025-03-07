@@ -1,0 +1,203 @@
+﻿@page "/securitization"
+@using Newtonsoft.Json
+@inject DatabaseService DatabaseService
+@inject IJSRuntime JSRuntime
+@attribute [Authorize]
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .search-container input {
+        padding: 10px;
+        width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .search-container button {
+        margin-left: 10px;
+        padding: 10px 15px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .search-container button:hover {
+        background-color: #0056b3;
+    }
+
+    .clickable {
+        cursor: pointer;
+        color: #007bff;
+        text-decoration: underline;
+    }
+
+    .clickable:hover {
+        color: #0056b3;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+</style>
+
+<h3 class="text-center my-4 text-primary">Securities</h3>
+
+
+
+    <div class="card">
+        <h3>Bonds Characteristics</h3>
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>ISIN</th>
+                    <th>Type</th>
+                    <th>Issuer</th>
+                </tr>
+            </thead>
+            <tbody>
+<tbody>
+    @foreach (var row in FilteredData)
+                    {
+                        @if (row.ContainsKey("ISIN"))
+                        {
+                            var isinValue = row["ISIN"]?.ToString() ?? string.Empty;
+
+                <tr @onclick="() => ApplyFilterForISIN(isinValue)" class="clickable">
+                    <td>@row["ISIN"]</td>
+                    <td>@(row.ContainsKey("Type") ? row["Type"].ToString() : "N/A")</td>
+                    <td>@(row.ContainsKey("Issuer") ? row["Issuer"].ToString() : "N/A")</td>
+                </tr>
+                        }
+                    }
+
+</tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+<!-- ✅ MODAL POUR AFFICHER LES FLUX -->
+<div class="modal fade" id="fluxModal" tabindex="-1" aria-labelledby="fluxModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="fluxModalLabel">Flux</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                @if (FilteredEche.Any())
+                {
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Maturity Date</th>
+                                    <th>Value Date</th>
+                                    <th>Premium</th>
+                                    <th>Amortizing</th>
+                                    <th>Ccy</th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (var row in FilteredEche)
+                            {
+                                        <tr>
+                                            <td>@row["MaturityDate"]</td>
+                                            <td>@row["ValueDate"]</td>
+                                            <td>@row["RateOrSpread"]</td>
+                                             <td>@row["Amortizing"]</td>
+                                             <td>@row["Ccy"]</td>
+
+                                        </tr>
+                            }
+                            </tbody>
+                        </table>
+                }
+                else
+                {
+                        <p class="text-muted">Aucun flux trouvé pour cet ISIN.</p>
+                }
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private string SearchTerm = string.Empty;
+    private List<Dictionary<string, object>> FilteredData = new();
+    private List<Dictionary<string, object>> FilteredEche = new();
+    private bool IsLoading = true;
+
+    /// <summary>
+    /// Charge la liste des ISINs au démarrage.
+    /// </summary>
+    private async Task ApplyFilter()
+    {
+        IsLoading = true;
+
+        string query = "SELECT ISIN, Type, Issuer FROM securities"; // Récupère tous les ISINs
+        FilteredData = DatabaseService.GetData(query, new Dictionary<string, object>());
+
+        // 🛠️ Déboguer la sortie de FilteredData
+        Console.WriteLine("Données récupérées pour les ISIN :");
+        Console.WriteLine(JsonConvert.SerializeObject(FilteredData, Formatting.Indented));
+
+        IsLoading = false;
+    }
+
+    /// <summary>
+    /// Charge les flux associés à un ISIN sélectionné et ouvre le modal.
+    /// </summary>
+    private async Task ApplyFilterForISIN(string selectedISIN)
+    {
+        if (string.IsNullOrEmpty(selectedISIN))
+        {
+            Console.WriteLine("Erreur : ISIN vide !");
+            return;
+        }
+
+        Console.WriteLine($"ISIN sélectionné : {selectedISIN}");
+
+        string query2 = "SELECT * FROM securitiesSchedule WHERE [ISIN] = @Input";
+        var parameters = new Dictionary<string, object> { { "@Input", selectedISIN } };
+
+        FilteredEche = DatabaseService.GetData(query2, parameters);
+
+        Console.WriteLine("Données de flux récupérées :");
+        Console.WriteLine(JsonConvert.SerializeObject(FilteredEche, Formatting.Indented));
+
+        await JSRuntime.InvokeVoidAsync("showFluxModal");
+    }
+
+    /// <summary>
+    /// Charge automatiquement les ISINs au démarrage.
+    /// </summary>
+    protected override async Task OnInitializedAsync()
+    {
+        await ApplyFilter();
+    }
+}
