@@ -1,0 +1,186 @@
+﻿@page "/dynamic-datagrid"
+@inject DatabaseService DatabaseService
+@using System.Text
+@inject IJSRuntime JSRuntime
+
+@attribute [Authorize]
+
+<h3 style="color: #00B5E2; font-size: 24px; font-weight: bold; text-transform: uppercase;">
+    Securities
+</h3>
+
+<!-- Filtres -->
+<div style="margin-bottom: 15px;">
+    <RadzenTextBox Placeholder="ISIN Filter" @bind-Value="filterISIN" Style="margin-right:10px;" />
+    <RadzenTextBox Placeholder="Type Filter" @bind-Value="filterType" Style="margin-right:10px;" />
+    <RadzenTextBox Placeholder="Issuer Filter" @bind-Value="filterIssuer" Style="margin-right:10px;" />
+    <RadzenButton Text="Apply Filter" Click="ApplyFilter" ButtonStyle="ButtonStyle.Primary" />
+</div>
+
+<RadzenDataGrid TItem="Dictionary<string, object>" Data="@DataStatic"
+                AllowSorting="false" AllowFiltering="false"
+                AllowPaging="true" PageSize="5" RowSelect="OnRowSelect">
+    <Columns>
+        <RadzenDataGridColumn TItem="Dictionary<string, object>" Title="ISIN" Filterable="true">
+            <Template Context="row">
+                @row["ISIN"]?.ToString()
+            </Template>
+        </RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="Dictionary<string, object>" Title="Type" Filterable="true">
+            <Template Context="row">
+                @row["Type"]?.ToString()
+            </Template>
+        </RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="Dictionary<string, object>" Title="Issuer" Filterable="true">
+            <Template Context="row">
+                @row["Issuer"]?.ToString()
+            </Template>
+        </RadzenDataGridColumn>
+    </Columns>
+</RadzenDataGrid>
+
+@if (Echeance != null && Echeance.Any())
+{
+    <RadzenExpander Expand="true" Icon="event_note">
+        <HeaderTemplate>
+            <h4 style="color: #00B5E2; font-size: 22px; font-weight: bold; margin-top: 10px;">
+                ISIN Selected: @selectedISIN
+            </h4>
+        </HeaderTemplate>
+        <ChildContent>
+            <h3 style="color: #00B5E2; font-size: 22px; font-weight: bold; margin-top: 15px;">
+                Schedules
+            </h3>
+            <RadzenDataGrid TItem="Dictionary<string, object>" Data="@Echeance" AllowSorting="true" AllowFiltering="true"
+                            AllowPaging="true" PageSize="5">
+                <Columns>
+                    @foreach (var column in Echeance.First().Keys)
+                    {
+                        <RadzenDataGridColumn TItem="Dictionary<string, object>" Title="@column">
+                            <Template Context="row">
+                                @row[column]?.ToString()
+                            </Template>
+                        </RadzenDataGridColumn>
+                    }
+                </Columns>
+            </RadzenDataGrid>
+            
+            <!-- Export to CSV Button -->
+            <RadzenButton Text="Export to CSV" Icon="file_download" Click="ExportToCsv"
+                          Style="margin-top: 10px; background-color: #00B5E2; color: white; border: none; font-weight: bold; padding: 10px 15px; border-radius: 5px;" />
+        </ChildContent>
+    </RadzenExpander>
+}
+else
+{
+    <p style="font-weight: bold; color: gray;">No schedules found for this ISIN.</p>
+}
+
+@code {
+    private List<Dictionary<string, object>> DataStatic = new();
+    private List<Dictionary<string, object>> Echeance = new();
+    private bool IsLoading;
+    private string selectedISIN;
+    private string filterISIN = string.Empty;
+    private string filterType = string.Empty;
+    private string filterIssuer = string.Empty;
+
+    private async Task ExportToCsv()
+    {
+        if (Echeance == null || !Echeance.Any())
+        {
+            Console.WriteLine("No data to export.");
+            return;
+        }
+
+        var csvBuilder = new StringBuilder();
+
+        // 1️⃣ Add CSV headers
+        var headers = string.Join(";", Echeance.First().Keys);
+        csvBuilder.AppendLine(headers);
+
+        // 2️⃣ Add data rows
+        foreach (var row in Echeance)
+        {
+            var values = string.Join(";", row.Values.Select(value => value?.ToString() ?? ""));
+            csvBuilder.AppendLine(values);
+        }
+
+        // 3️⃣ Convert to byte array for download
+        var csvBytes = Encoding.UTF8.GetBytes(csvBuilder.ToString());
+        var csvBase64 = Convert.ToBase64String(csvBytes);
+
+        // 4️⃣ Trigger JavaScript download
+        await JSRuntime.InvokeVoidAsync("downloadFile", "Echeances.csv", "text/csv", csvBase64);
+    }
+
+    private async Task ApplyFilter()
+    {
+        IsLoading = true;
+        StringBuilder query = new("SELECT ISIN, Type, Issuer FROM securities WHERE 1=1");
+
+        var parameters = new Dictionary<string, object>();
+
+        if (!string.IsNullOrEmpty(filterISIN))
+        {
+            query.Append(" AND ISIN LIKE @ISIN");
+            parameters.Add("@ISIN", $"%{filterISIN}%");
+        }
+        if (!string.IsNullOrEmpty(filterType))
+        {
+            query.Append(" AND Type LIKE @Type");
+            parameters.Add("@Type", $"%{filterType}%");
+        }
+        if (!string.IsNullOrEmpty(filterIssuer))
+        {
+            query.Append(" AND Issuer LIKE @Issuer");
+            parameters.Add("@Issuer", $"%{filterIssuer}%");
+        }
+
+        DataStatic = DatabaseService.GetData(query.ToString(), parameters);
+        IsLoading = false;
+        StateHasChanged();
+    }
+
+    private async Task OnRowSelect(Dictionary<string, object> selectedRow)
+    {
+        if (selectedRow == null)
+        {
+            Console.WriteLine("Error: Selected row is NULL!");
+            return;
+        }
+
+        if (selectedRow.TryGetValue("ISIN", out var isinValue) && isinValue is string isin)
+        {
+            selectedISIN = isin;
+            Console.WriteLine($"Selected ISIN: {selectedISIN}");
+            await ApplyFilterForISIN(selectedISIN);
+        }
+        else
+        {
+            Console.WriteLine("Error: ISIN column does not exist or is not a string!");
+        }
+    }
+
+    private async Task ApplyFilterForISIN(string isin)
+    {
+        if (string.IsNullOrEmpty(isin))
+        {
+            Console.WriteLine("Error: ISIN is empty!");
+            return;
+        }
+
+        Console.WriteLine($"Loading data for ISIN: {isin}");
+
+        string query2 = "SELECT * FROM securitiesSchedule WHERE [ISIN] = @Input";
+        var parameters = new Dictionary<string, object> { { "@Input", isin } };
+
+        Echeance = DatabaseService.GetData(query2, parameters);
+        StateHasChanged();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ApplyFilter();
+    }
+}

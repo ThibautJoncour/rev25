@@ -1,0 +1,149 @@
+﻿@page "/GlobalSchedules"
+@using Newtonsoft.Json
+@using System.Text
+@inject DatabaseService DatabaseService
+@inject IJSRuntime JSRuntime
+@inject DialogService DialogService
+@using Radzen
+
+<h3 style="color: #00B5E2; font-size: 24px; font-weight: bold; text-transform: uppercase;">
+    Global Schedules
+</h3>
+
+<div style="margin-bottom: 15px;">
+    <RadzenTextBox Placeholder="Arpson Filter" @bind-Value="ARPSONRef" Style="margin-right:10px;" />
+
+    <RadzenDatePicker Placeholder="Start Date" @bind-Value="startdate" Style="margin-right:10px;" DateFormat="yyyy-MM-dd" />
+
+    <RadzenDatePicker Placeholder="Maturity Date" @bind-Value="maturitydate" Style="margin-right:10px;" DateFormat="yyyy-MM-dd" />
+
+    <RadzenButton Text="Apply Filter" Click="ApplyFilter" ButtonStyle="ButtonStyle.Primary" />
+
+    <RadzenButton Text="Export to CSV" Icon="file_download" Click="ExportToCsv"
+                          Style="margin-top: 10px; background-color: #00B5E2; color: white; border: none; font-weight: bold; padding: 10px 15px; border-radius: 5px;" />
+</div>
+
+@if (dataset != null && dataset.Count > 0)
+{
+            <p>Nombre d'enregistrements chargés : @dataset.Count</p>
+}
+else
+{
+            <p>Aucune donnée chargée.</p>
+}
+
+<RadzenDataGrid AllowPaging="true" AllowSorting="true" PageSize="10" Data="@dataset" TItem="Dictionary<string, object>">
+    <Columns>
+        @if (dataset != null && dataset.Count > 0)
+        {
+            @foreach (var column in dataset.First().Keys.Take(6))
+            {
+                                <RadzenDataGridColumn TItem="Dictionary<string, object>" Title="@column">
+                                    <Template Context="row">
+                        @if (row[column] is DateTime date)
+                        {
+                            @date.ToString("yyyy-MM-dd") <!-- Formatage des dates -->
+                        }
+                        else
+                        {
+                            @row[column]?.ToString()
+                        }
+                                    </Template>
+                                </RadzenDataGridColumn>
+            }
+        }
+    </Columns>
+</RadzenDataGrid>
+
+@code {
+    private List<Dictionary<string, object>> dataset = new();
+    private string ARPSONRef { get; set; } = string.Empty;
+    private DateTime? startdate { get; set; } = null;
+    private DateTime? maturitydate { get; set; } = null;
+    private bool IsLoading { get; set; } = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        LoadData();
+        await Task.Delay(500); // Assure que l'affichage se rafraîchit
+        StateHasChanged();
+    }
+
+    private void LoadData()
+    {
+        Console.WriteLine("LoadData() called");
+
+        string query = "SELECT * FROM schedules";
+        dataset = DatabaseService.GetData(query, new Dictionary<string, object>());
+
+        Console.WriteLine($"Records fetched: {dataset?.Count ?? 0}");
+
+        if (dataset?.Count > 0)
+        {
+            foreach (var key in dataset.First().Keys)
+            {
+                Console.WriteLine($"Column: {key} - Value: {dataset.First()[key]}");
+            }
+        }
+
+        StateHasChanged();
+    }
+    private async Task ExportToCsv()
+    {
+        if (dataset == null || !dataset.Any())
+        {
+            Console.WriteLine("No data to export.");
+            return;
+        }
+
+        var csvBuilder = new StringBuilder();
+
+        // 1️⃣ Add CSV headers
+        var headers = string.Join(";", dataset.First().Keys);
+        csvBuilder.AppendLine(headers);
+
+        // 2️⃣ Add data rows
+        foreach (var row in dataset)
+        {
+            var values = string.Join(";", row.Values.Select(value => value?.ToString() ?? ""));
+            csvBuilder.AppendLine(values);
+        }
+
+        // 3️⃣ Convert to byte array for download
+        var csvBytes = Encoding.UTF8.GetBytes(csvBuilder.ToString());
+        var csvBase64 = Convert.ToBase64String(csvBytes);
+
+        // 4️⃣ Trigger JavaScript download
+        await JSRuntime.InvokeVoidAsync("downloadFile", "Echeances.csv", "text/csv", csvBase64);
+    }
+
+    private async Task ApplyFilter()
+    {
+        IsLoading = true;
+        StringBuilder query = new("SELECT * FROM schedules WHERE 1=1");
+        var parameters = new Dictionary<string, object>();
+
+        if (!string.IsNullOrEmpty(ARPSONRef))
+        {
+            query.Append(" AND ARPSONRef LIKE @ISIN");
+            parameters.Add("@ISIN", $"%{ARPSONRef}%");
+        }
+        if (startdate.HasValue)
+        {
+            query.Append(" AND ValueDate >= @StartDate");
+            parameters.Add("@StartDate", startdate.Value.ToString("yyyy-MM-dd"));
+        }
+        if (maturitydate.HasValue)
+        {
+            query.Append(" AND MaturityDate <= @MaturityDate");
+            parameters.Add("@MaturityDate", maturitydate.Value.ToString("yyyy-MM-dd"));
+        }
+
+        dataset = DatabaseService.GetData(query.ToString(), parameters);
+
+        Console.WriteLine($"Filtered records fetched: {dataset?.Count ?? 0}");
+
+        IsLoading = false;
+        StateHasChanged();
+    }
+}
