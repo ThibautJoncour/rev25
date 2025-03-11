@@ -30,6 +30,7 @@ builder.Services.AddScoped<DialogService>();
 builder.Services.AddAuthorizationCore();
 // Enregistrement du provider d'authentification personnalisé
 builder.Services.AddScoped<CustomAuthenticationStateProvider>();
+builder.Services.AddRadzenComponents();
 
 
 builder.Services.AddAuthorizationCore();
