@@ -1,6 +1,6 @@
 <div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">Reversibility C#</a>
+        <a class="navbar-brand" href="">Reversibility</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,12 +27,19 @@
 
         <div>
             <button class="nav-link btn btn-toggle" @onclick="ToggleSubMenu2">
-                <span class="oi @(IsSubMenuOpen2 ? "oi-chevron-down" : "oi-chevron-right")"></span> Data Market
+                <span class="oi @(IsSubMenuOpen2 ? "oi-chevron-down" : "oi-chevron-right")"></span> Market Data
             </button>
             <div class="submenu" style="@(IsSubMenuOpen2 ? "display:block;" : "display:none;")">
-                <NavLink class="nav-link" href="DataMarketRates">📈 Rates</NavLink>
-                <NavLink class="nav-link" href="DataMarketCcy">💱 FX</NavLink>
-                <NavLink class="nav-link" href="DataMarketCurve">🔀  Curves</NavLink>
+                <NavLink class="nav-link" href="DataMarketRates">
+                    <span class="oi oi-graph" aria-hidden="true"></span> Rates
+                </NavLink>
+                <NavLink class="nav-link" href="DataMarketCcy">
+                    <span class="oi oi-transfer" aria-hidden="true"></span> FX
+                </NavLink>
+                <NavLink class="nav-link" href="DataMarketCurve">
+                    <span class="oi oi-pulse" aria-hidden="true"></span> Curves
+                </NavLink>
+
             </div>
         </div>
 

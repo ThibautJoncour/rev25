@@ -58,9 +58,11 @@
 
 </style>
 
-<h3 class="text-center my-4 text-primary">Data Market</h3>
 
-<div class="row mb-4">
+<h3 class="text-center my-4 text-primary">Curves</h3>
+
+<!-- Centered Form Controls with Left-Aligned Labels -->
+<div class="row justify-content-center mb-4">
     <!-- Input Code -->
     <div class="col-md-3">
         <label for="SearchTerm" class="form-label">Input Code:</label>
@@ -76,51 +78,55 @@
         <input id="SearchStartDate" type="date" class="form-control" @bind="SearchStartDate" />
     </div>
 
-    <!-- Search Button (aligné) -->
-    <div class="col-md-3 d-flex align-items-end">
+    <!-- Search Button -->
+    <div class="col-md-3 d-flex flex-column justify-content-end">
+        <label class="form-label">&nbsp;</label> <!-- Spacer to align with other labels -->
         <button @onclick="SearchData" class="btn btn-primary w-100">Search</button>
     </div>
 </div>
 
 
-
-    <!-- Data Table & Chart -->
-    <div class="row">
-        <!-- Data Table -->
-        <div class="col-md-7">
-            <table id="dataTableRate" class="table table-bordered table-striped">
-                <thead class="table-dark">
+<!-- Bootstrap Grid System: This row contains two sections - a smaller data table (col-md-4) and a larger chart (col-md-8) -->
+<div class="row">
+    <!-- Data Table Section (Smaller) -->
+    <div class="col-md-4">
+        <!-- Bootstrap Table Component -->
+        <table id="dataTableRate" class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Date</th>
+                    <th>Curve</th>
+                    <th>Point</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var row in request_all)
+                {
                     <tr>
-                        <th>Date</th>
-                        <th>Curve</th>
-                        <th>Point</th>
+                        <td>@row["Date"]</td>
+                        <td>@row["Code"]</td>
+                        <td>@row["Point"]</td>
                     </tr>
-                </thead>
-                <tbody>
-                    @foreach (var row in request_all)
-                        {
-                            <tr>
-                                <td>@row["Date"]</td>
-                                <td>@row["Code"]</td>
-                                <td>@row["Point"]</td>
-                            </tr>
-                        }
-                </tbody>
-            </table>
-        </div>
+                }
+            </tbody>
+        </table>
+    </div>
 
-        <!-- Chart -->
-        <div class="col-md-5">
-            <div class="card shadow-lg">
-                <div class="card-header bg-primary text-white">
-                    <h5 class="card-title mb-0">Graphique</h5>
-                </div>
-                <div class="card-body">
-                    <canvas id="curveChart" style="width: 100%; height: 400px;"></canvas>
-                </div>
+    <!-- Chart Section (Bigger) -->
+    <div class="col-md-8">
+        <!-- Bootstrap Card Component -->
+        <div class="card shadow-lg">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0">Graph</h5>
+            </div>
+            <div class="card-body">
+                <!-- Chart.js Canvas: The chart expands to fit the container -->
+                <canvas id="curveChart" style="width: 100%; height: 500px;"></canvas>
             </div>
         </div>
     </div>
+</div>
+
 
 <!-- Modal for Rate Selection -->
 <div class="modal" style="@(IsRateModalOpen ? "display:block;" : "display:none;")">

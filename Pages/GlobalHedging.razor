@@ -20,26 +20,26 @@
     <RadzenButton Text="Apply Filter" Click="ApplyFilter" ButtonStyle="ButtonStyle.Primary" />
 
     <RadzenButton Text="Export to CSV" Icon="file_download" Click="ExportToCsv"
-                          Style="margin-top: 10px; background-color: #00B5E2; color: white; border: none; font-weight: bold; padding: 10px 15px; border-radius: 5px;" />
+                  Style="margin-top: 10px; background-color: #00B5E2; color: white; border: none; font-weight: bold; padding: 10px 15px; border-radius: 5px;" />
 </div>
 
 @if (dataset != null && dataset.Count > 0)
 {
-        <p>Nombre d'enregistrements chargés : @dataset.Count</p>
+    <p>Nombre d'enregistrements chargés : @dataset.Count</p>
 }
 else
 {
-        <p>Aucune donnée chargée.</p>
+    <p>Aucune donnée chargée.</p>
 }
 
-<RadzenDataGrid AllowPaging="true" AllowSorting="true" PageSize="10" Data="@dataset" TItem="Dictionary<string, object>">
+<RadzenDataGrid AllowPaging="true" AllowSorting="true" AllowFiltering="true" PageSize="25" Data="@dataset" TItem="Dictionary<string, object>">
     <Columns>
         @if (dataset != null && dataset.Count > 0)
         {
             @foreach (var column in dataset.First().Keys.Take(6))
             {
-                        <RadzenDataGridColumn TItem="Dictionary<string, object>" Title="@column">
-                            <Template Context="row">
+                <RadzenDataGridColumn TItem="Dictionary<string, object>" Title="@column">
+                    <Template Context="row">
                         @if (row[column] is DateTime date)
                         {
                             @date.ToString("yyyy-MM-dd") <!-- Formatage des dates -->
@@ -48,8 +48,8 @@ else
                         {
                             @row[column]?.ToString()
                         }
-                            </Template>
-                        </RadzenDataGridColumn>
+                    </Template>
+                </RadzenDataGridColumn>
             }
         }
     </Columns>
